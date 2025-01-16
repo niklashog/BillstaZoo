@@ -1,0 +1,102 @@
+/* Primärt Alegreya på headers och Montserrat på brödtext. Några undantag. */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:"Alegreya", "Franklin Gothic Medium", serif;
+}
+
+body, html {
+  font-size: 14px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #5B8C5A;
+}
+footer{
+  background: rgb(190, 193, 92);
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  color: #242124;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+nav{
+  height: 70px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #FCF7FF;
+  text-align: center;
+  position: fixed;
+  color: #242124;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav a{
+  margin-top: 15px;
+  display: inline-block;
+  color:#322D39;
+  text-decoration: none;
+  background-color: #FCF7FF;
+  transition: transform 0.1s, background-color 0.2s ease;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+nav a:hover{
+  background-color: rgba(190, 193, 92, 0.4)
+}
+nav a:active{
+  transform:scale(0.95);
+  opacity: 0.7;
+}
+
+.nav-separator{
+  color:#52B851;
+  padding: 5px;
+}
+
+
+/* Footer */
+.socials-box{
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.socials-text{
+  font-family:"Alegreya", "Franklin Gothic Medium", serif;
+  font-weight: bold;
+  color: #322D39;
+  font-size: 18px;
+  padding-right: 10px;
+}
+.socials-button,
+  .socials-button:visited{
+    width: 30px;
+    height: 30px;
+    color: #322D39;
+    font-size: 28px;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+  .socials-button:hover{
+    opacity: 0.7;
+  }
+  .socials-button:active{
+      opacity: 0.4;
+  }

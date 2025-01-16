@@ -1,0 +1,87 @@
+/* Primärt Alegreya på headers och Montserrat på brödtext. Några undantag. */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:"Alegreya", "Franklin Gothic Medium", serif;
+}
+
+body, html {
+  font-size: 14px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #5B8C5A;
+}
+footer{
+  border-color: #242124;
+  background: #BEC15C;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  color: #242124;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Lägga bilden i kortet som bakgrund istället så jag kan ha en text med opacity 0 som också kommer fram när jag hovrar. */
+
+.animal-card{
+  margin: 8px;
+  width: 290px;
+  height: 360px;
+  background-color: #FCF7FF;
+  border: 1px solid #242124;
+  border-radius: 16px;
+
+  position: relative;
+  display: inline-block;
+}
+.animal-thumbnail{
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.animal-thumbnail-header{
+  margin: 5px;
+  font-family:"Alegreya", "Franklin Gothic Medium", serif;
+  font-size: 20px;
+}
+.animal-thumbnail-text{
+  margin: 5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.animal-card:after{
+  content:"";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 270px;
+  background: rgba(36, 33, 36, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.animal-card:hover:after{
+  opacity: 1;
+}

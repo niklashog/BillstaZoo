@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Färgstark Zoo-Sida (SPA)</title>
+  <style>
+    /* Grundläggande reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      background: #fff3e7;
+      color: #333;
+    }
+
+    /* Lekfull header */
+    header {
+      background: linear-gradient(120deg, #ff9d9d, #ffc44d);
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Navigationsmeny */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff176;
+      padding: 0.5rem 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      padding: 0.5rem 1rem;
+      background: #ffde59;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    nav a:hover {
+      transform: scale(1.1);
+      background: #ffd000;
+    }
+
+    /* Huvudinnehåll */
+    #app {
+      padding: 1rem;
+      min-height: 60vh;
+    }
+
+    /* Sektioner (sidor) */
+    section {
+      display: none;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    /* Animation för sektioner */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* Footer */
+    footer {
+      background: #ff9d9d;
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Välkommen till Lekfulla Zoo!</h1>
+  </header>
+
+  <nav>
+    <a href="#/" data-route="/">Hem</a>
+    <a href="#/animals" data-route="/animals">Våra djur</a>
+    <a href="#/events" data-route="/events">Evenemang</a>
+    <a href="#/tickets" data-route="/tickets">Biljetter</a>
+  </nav>
+
+  <!-- Huvudbehållare för innehåll -->
+  <main id="app">
+    
+    <!-- “Hem”-sektion -->
+    <section id="home">
+      <h2>Hem</h2>
+      <p>
+        Upptäck vår färgglada djurpark och upplev ett äventyr bland unika djur och
+        spännande evenemang. Bläddra runt i menyn för att läsa mer! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel earum ea, unde rerum minima assumenda incidunt nihil commodi illum enim blanditiis. Nemo ratione ducimus harum aliquid corrupti et natus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quas provident quasi nemo corporis ducimus dolorum voluptas minus iste. Architecto asperiores rerum impedit velit perferendis modi quisquam vel ullam totam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat harum, voluptates omnis quae vero doloribus eveniet, provident inventore exercitationem deserunt aliquam amet repellendus atque, suscipit perspiciatis illo ex ea delectus.
+      </p>
+      <p>
+        <strong>Tips:</strong> Klicka på “Våra djur” för att se en lista över våra fantastiska invånare.
+      </p>
+    </section>
+
+    <!-- “Våra djur”-sektion -->
+    <section id="animals">
+      <h2>Våra djur</h2>
+      <p>
+        Vi har allt från lekfulla apor till långhalsade giraffer. Kom och hälsa på:
+      </p>
+      <ul>
+        <li>Lejon</li>
+        <li>Giraffer</li>
+        <li>Apor</li>
+        <li>Zebror</li>
+        <li>Elefanter</li>
+      </ul>
+    </section>
+
+    <!-- “Evenemang”-sektion -->
+    <section id="events">
+      <h2>Evenemang</h2>
+      <p>
+        Hos oss händer det alltid något roligt! Just nu kan du uppleva:
+      </p>
+      <ul>
+        <li>Höstfestival med pumpor och spöken</li>
+        <li>Matningsshow med exotiska djur</li>
+        <li>Guidad nattvandring i parken</li>
+      </ul>
+    </section>
+
+    <!-- “Biljetter”-sektion -->
+    <section id="tickets">
+      <h2>Köp dina biljetter</h2>
+      <p>
+        Välj mellan dagsbiljett, familjebiljett eller årskort.  
+        <strong>Upplev djurparken hela året!</strong>
+      </p>
+      <button style="background: #ff9d9d; padding: 1rem; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+        Köp nu
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Lekfulla Zoo
+  </footer>
+
+  <script>
+    // En enkel router-funktion som gömmer/visar sektioner beroende på #hash
+    const routes = {
+      '/': document.getElementById('home'),
+      '/animals': document.getElementById('animals'),
+      '/events': document.getElementById('events'),
+      '/tickets': document.getElementById('tickets')
+    };
+
+    // Visa endast rätt sektion
+    function navigate(path) {
+      for (const key in routes) {
+        routes[key].style.display = 'none';
+      }
+      routes[path].style.display = 'block';
+    }
+
+    // När URL:ens hash ändras, navigera
+    window.addEventListener('hashchange', () => {
+      const hashPath = window.location.hash.replace('#', '');
+      // Om tom => '/', annars = hashPath
+      navigate(hashPath === '' ? '/' : hashPath);
+    });
+
+    // Initiera första läsningen (när sidan laddas)
+    window.addEventListener('load', () => {
+      const hashPath = window.location.hash.replace('#', '');
+      navigate(hashPath === '' ? '/' : hashPath);
+    });
+  </script>
+</body>
+</html>
