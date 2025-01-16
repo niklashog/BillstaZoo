@@ -16,3 +16,7 @@ Citron: bec15c
 White: fcf7ff
 Black: 242124
 
+
+To do.
+
+SV | EN?

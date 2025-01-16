@@ -16,7 +16,7 @@ h4,
 h5,
 h6 {
   font-family:"Alegreya", "Franklin Gothic Medium", serif;
-  text-align: center;
+
 }
 
 body, html {
@@ -38,6 +38,7 @@ footer{
 }
 
 nav{
+  margin-top: 15px;
   position: relative;
   display: flex;
   height: 70px;
@@ -45,14 +46,15 @@ nav{
   font-weight: 600;
   background: #F3F7F3;
   position: fixed;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-left: 10%;
+  width: 80%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   z-index: 9001;
 }
 nav img{
   position: absolute;
   height: 75px;
-  margin-left: 10%;
+  margin-left: 2%;
 }
 nav ul{
   top: 50%;
@@ -83,41 +85,61 @@ nav a:active{
 section{
   scroll-margin-top: 100px;
   background-color: #F3F7F3;
-  justify-content: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  /* justify-content: center; */
+  margin: auto;
   margin-bottom: 40px;
-  padding: 1% 4%;
+  padding: 20px 30px;
   border-radius: 15px;
+  max-width: 1020px;
 }
 article{
- margin-top: 10px;
- margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
+
+.grid{
+  display:grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+}
+
 .startsection,
 .endsection{
+  border: 0px none;
   margin-bottom: 75px;
   background-color:#5B8C5A;
-}
-article{
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
 }
 
 #app{
 
 }
 
-#animals{
-
-}
-
-.card-container{
+/* Utility */
+.card-wrapper{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-/* Thumbnails animals */
+
+
+/* Thumbnails small card */
+.small-card{
+  margin: 4px;
+  width: 180px;
+  height: 223px;
+  border: 1px solid #242124;
+  border-radius: 16px;
+}
+.small-card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+/* Thumbnails animal card */
+
 .animal-card{
   margin: 4px;
   width: 290px;
