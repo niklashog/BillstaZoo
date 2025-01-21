@@ -148,11 +148,11 @@ footer{
 }
 
 /* Utility */
-.wrapper-center{
+.animal-card-wrapper{
   margin-top: 1em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 
@@ -287,6 +287,13 @@ textarea{
   margin-bottom: 0.5em;
 }
 
+.formular-label{
+  display: inline-block;
+  width: 5em;
+  margin-right: 1em;
+  vertical-align: center;
+  height: 0.5em;
+}
 .subheader-text{
   margin-bottom: 2em;
 }
@@ -296,12 +303,6 @@ border: 1px #242124 solid;
 background-color: #F3F7F3;
 padding: 5px;
 }
-.formular-label-margin{
-  display: inline-block;
-  width: 5em;
-  margin-right: 1em;
-}
-
 
 .formular-and-maps{
   display: flex;
