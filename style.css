@@ -1,6 +1,11 @@
-/* Primärt Alegreya på headers och Montserrat på brödtext. Några undantag. */
+/* Primärt Alegreya på headers och Montserrat på brödtext. */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+::selection{
+  color: #fcf7ff;
+  background: #52b851;
+}
 
 * {
   margin: 0;
@@ -16,7 +21,6 @@ h4,
 h5,
 h6 {
   font-family:"Alegreya", "Franklin Gothic Medium", serif;
-
 }
 
 body, html {
@@ -25,48 +29,42 @@ body, html {
   scroll-behavior: smooth;
   background-color: #5B8C5A;
 }
-footer{
-  background: rgb(190, 193, 92);
-  text-align: center;
-  padding: 5px;
-  position: fixed;
-  color: #242124;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-}
 
-nav{
-  margin-top: 15px;
-  position: relative;
+/* Header, nav */
+header{
   display: flex;
-  height: 70px;
+  justify-content: center;
+  margin-bottom: 160px;
+}
+nav{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 90px;
   font-size: 16px;
   font-weight: 600;
-  background: #F3F7F3;
-  position: fixed;
-  margin-left: 10%;
+
   width: 80%;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  z-index: 9001;
+  max-width: 1020px;
+  background: #F3F7F3;
+
+  margin-top: 2%;
+  box-shadow: 0px 3px 5px rgba(107, 107, 107, 0.1);
+  border-radius: 15px;
+  z-index: 1;
 }
 nav img{
-  position: absolute;
   height: 75px;
-  margin-left: 2%;
 }
 nav ul{
-  top: 50%;
-  left: 50%;
-  position: absolute;
   display: flex;
-  transform: translate(-50%, -50%);
   list-style: none;
 }
 
-nav a{
-  vertical-align: top;
+nav ul a{
   display: inline-block;
   color:#322D39;
   text-decoration: none;
@@ -82,44 +80,81 @@ nav a:active{
   transform:scale(0.95);
   opacity: 0.7;
 }
+
+main{
+  width: 80%;
+  margin: auto;
+  max-width: 1020px;
+  margin-bottom: 200px;
+}
+
 section{
-  scroll-margin-top: 100px;
+  scroll-margin-top: 160px;
   background-color: #F3F7F3;
-  /* justify-content: center; */
   margin: auto;
   margin-bottom: 40px;
   padding: 20px 30px;
   border-radius: 15px;
-  max-width: 1020px;
 }
 article{
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns: auto 1fr;
-  gap: 15px;
+footer{
+  background: rgb(190, 193, 92);
+  text-align: center;
+  padding: 5px;
+  /* position: fixed; */
+  color: #242124;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
 
-.startsection,
-.endsection{
-  border: 0px none;
-  margin-bottom: 75px;
-  background-color:#5B8C5A;
+/* START OF VIDEO STUFF */
+.video-background{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
 }
 
-#app{
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  min-width: 100%; 
+  min-height: 100%; 
+  object-fit: cover;
+  z-index: 1;
+}
 
+.video-background .content {
+  position: relative;
+  z-index: 2; /* Placera innehåll ovanpå videon */
+  color: white; /* Gör texten vit så den syns */
+  text-align: center;
+  padding: 1em;
+}
+
+/* END OF VIDEO STUFF */
+
+.logo{
+  justify-self: left;
+  display: block;
 }
 
 /* Utility */
-.card-wrapper{
+.wrapper-center{
+  margin-top: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 
 
 /* Thumbnails small card */
@@ -140,6 +175,7 @@ article{
 
 /* Thumbnails animal card */
 
+.animal-card-texted,
 .animal-card{
   margin: 4px;
   width: 290px;
@@ -150,6 +186,7 @@ article{
   position: relative;
   display: inline-block;
 }
+
 .animal-thumbnail{
   width: 100%;
   height: 270px;
@@ -158,6 +195,7 @@ article{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
 .animal-thumbnail-header{
   padding: 5px;
   font-family:"Alegreya", "Franklin Gothic Medium", serif;
@@ -168,6 +206,31 @@ article{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+.animal-card-texted:after{
+  content:"Läs mer..";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 270px;
+  background: rgba(36, 33, 36, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  font-family:"Alegreya", "Franklin Gothic Medium", serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fcf7ff;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center; 
+  pointer-events: none;
+}
+
 .animal-card:after{
   content:"";
   position: absolute;
@@ -181,11 +244,90 @@ article{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+.animal-card-texted:hover:after,
 .animal-card:hover:after{
   opacity: 1;
 }
 
+/* Floater */
 
+.mainwrapper{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0px;
+}
+
+.floater{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  background: #fcf7ff;
+  border-radius: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  width: 45px;
+  height: 45px;
+}
+.floater-image{
+  font-size: 36px;
+  color: rgba(36, 33, 36, 0.8);
+  z-index: 3;
+}
+
+/* Formular */
+
+input,
+textarea{
+  border: 1px #242124 solid;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.subheader-text{
+  margin-bottom: 2em;
+}
+
+.subscribe-button{
+border: 1px #242124 solid;
+background-color: #F3F7F3;
+padding: 5px;
+}
+.formular-label-margin{
+  display: inline-block;
+  width: 5em;
+  margin-right: 1em;
+}
+
+
+.formular-and-maps{
+  display: flex;
+  flex-flow: row wrap;
+}
+.formular-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 45%;
+  margin-right: 5%;
+}
+.maps-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 45%;
+
+}
+
+
+.googl-ehtml{
+  #embed-map-display img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}
+}
 
 /* Footer */
 .socials-box{

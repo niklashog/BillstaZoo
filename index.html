@@ -3,38 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar</title>
+  <title>Billsta Djurpark</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <!-- Logo får ligga som bakgrund i naven? -->
-  <nav>
-    <img class="nav-logo"src="images/billstadjurpark.svg" alt="">
-<ul>
-  <li>
-    <a href="#home">Hem</a>
-  </li>
-  <li>
-    <a href="#info">Info & Priser</a>
-  </li>
-  <li>
-    <a href="#housing">Boende</a>
-  </li>
-  <li>
-    <a href="#animals">Våra Djur</a>
-  </li>
-  <li>
-    <a href="#activities">Aktiviteter</a>
-  </li>
-  <li>
-    <a href="#foodanddrink">Mat & Dryck</a>
-  </li>
-</ul>
+
+<!-- 
+<div class="video-background">
+  <video autoplay muted loop playinline>
+    <source src="https://cdn.pixabay.com/video/2021/07/12/81161-574760016_large.mp4">
+    Din webbläsare stödjer inte videouppspelning.
+  </video>
 </div>
-  </nav>
-  <main id="app">
-    <section class="startsection"></section>
+<div class="content">
+  
+</div> -->
+
+    <div class="floater">
+      <a href="#home"><i class="fa-solid fa-chevron-up floater-image"></i>
+      </a>
+    </div>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/billstadjurpark.svg" alt="">
+      </div>
+  <ul>
+    <li>
+      <a href="#info">Info & Priser</a>
+    </li>
+    <li>
+      <a href="#housing">Boende</a>
+    </li>
+    <li>
+      <a href="#animals">Våra Djur</a>
+    </li>
+    <li>
+      <a href="#activities">Aktiviteter</a>
+    </li>
+    <li>
+      <a href="#foodanddrink">Mat & Dryck</a>
+    </li>
+    <li>
+      <a href="#contact">Kontakt</a>
+    </li>
+  </ul>
+  </div>
+    </nav>
+  </header>
+  
+  <main>
 
     <section id="home">
       <h2>Just nu</h2>
@@ -66,98 +86,127 @@
       <article>
         <p>Välj det som passar dig bäst! Bo i husvagn eller husbil på vår camping eller hyr ett av våra populära trätält! Endast 350 sek per natt. Torsten tar emot er och ser till att ni känner er som hemma!</p>    
           <div class="small-card">
-            <img  class="small-card-image" src="/images/vaktis.jpg" alt="Vaktmästare">
+            <img  class="small-card-image" src="/images/vaktisweb.jpg" alt="Vaktmästare">
             <p>Möt Torsten (nyvaken)</p>
           </div>
       </article>
     </section>
 
     <section id="animals">
-      <h2>Våra djur</h2>
+      <h2>Möt våra fantastiska djur</h2>
+
       <article>
+        <div>Vi har väldigt många djur i parken! Få en försmak på några utav våra vänner här nedanför. Klicka bara på bilden om du vill lära dig mer om just den djurarten.</div>
+        <div class="wrapper-center">
 
-        <div class="card-wrapper">
-
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/llama.avif" alt="Llama">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Llama" target="_blank">
+              <img  class="animal-thumbnail" src="/images/llamaweb.jpg" alt="Llama">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Träffa Llama Del Rey
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Träffa vår fantastiska vän som tom sjunger bättre än orginalet!
               </p>
             </div>
           </div>
     
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/lillapis.jpg" alt="Apa">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Monkey" target="_blank">
+              <img  class="animal-thumbnail" src="/images/lillapisweb.jpg" alt="Apa">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Träffa Lill-Apis
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Två veckor har gått sedan Lill-Apis slarvade bort sin banan.
               </p>
             </div>
           </div>
   
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/vittiger.jpg" alt="Vit tiger">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/White_tiger" target="_blank">
+              <img  class="animal-thumbnail" src="/images/vittigerweb.jpg" alt="Vit tiger">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Träffa en av våra nyare vänner!
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Sedan början av februari har vi en vit tigerkompis hos oss.
               </p>
             </div>
           </div>
   
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/goat.jpg" alt="Geten Getrudh.">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Goat" target="_blank">
+              <img  class="animal-thumbnail" src="/images/goatweb.jpg" alt="Vit get">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Goat Simulator?
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Inte riktigt. Men vi gör så gott vi kan.
               </p>
             </div>
           </div>
   
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/gorilla.jpg" alt="Gorillaz">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Gorilla" target="_blank">
+              <img  class="animal-thumbnail" src="/images/gorillaweb.jpg" alt="Gorilla">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 I'm happy, feeling glad!
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Got sunshine, in my bag! Träffa vår Gorilla, Z!
               </p>
             </div>
           </div>
   
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/lillasimba.jpg" alt="Simba">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Lion" target="_blank">
+              <img  class="animal-thumbnail" src="/images/lillasimbaweb.jpg" alt="Lejonunge">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Träffa Simba!
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Vårt nyaste tillskott är enligt oss själva också sötast! Möt Simba! Grr!
               </p>
             </div>
           </div>
   
-          <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/panda.jpg" alt="Simba">
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Panda" target="_blank">
+              <img  class="animal-thumbnail" src="/images/pandaweb.jpg" alt="Panda">
+            </a>
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 I'm not a big fat panda.
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 I'm THE Big Fat Panda! Möt Po, vår alltid hungriga panda i parken!
+              </p>
+            </div>
+          </div>
+
+          <div class="animal-card-texted">
+            <a href="https://en.wikipedia.org/wiki/Corythosaurus" target="_blank">
+              <img  class="animal-thumbnail" src="/images/denver.jpg" alt="Panda">
+            </a>
+            <div class="animal-thumbnail-description">
+              <div class="animal-thumbnail-header">
+                Vi har dinosaurer också!
+              </div>
+              <p class="animal-thumbnail-text">
+                Precis lika verkliga som på bilden. Dem bits inte. Sann historia.
               </p>
             </div>
           </div>
@@ -173,11 +222,11 @@
         
         <div class="card-container">
           <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/daiga-ellaby-unsplash.jpg" alt="feed animal">
+            <img  class="animal-thumbnail" src="/images/daiga-ellaby-unsplashweb.jpg" alt="feed animal">
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Mata djuren
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Två gånger om dagen bjuder vi in till att mata djuren i parken.
               </p>
@@ -185,11 +234,11 @@
           </div>
 
           <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/piff.jpg" alt="feed animal">
+            <img  class="animal-thumbnail" src="/images/piffweb.jpg" alt="feed animal">
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Kurragömma
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Vinn mot Piff i Kurragömma! Ta chansen att vinna fina priser!
               </p>
@@ -205,15 +254,19 @@
       <article>
 
         <div class="grid">
-          <p>
-            Kom in i kiosken! Här hittar du allt från godis och snacks till läskande drycker och matiga rätter. Passa på att prova vår berömda ap-pizza eller svalka dig med en glass. Vi har något för alla smaker!
-          </p>
+          <span>
+            <span>
+              Kom in i kiosken! Här hittar du allt från godis och snacks till läskande drycker och matiga rätter. Passa på att prova vår berömda ap-pizza eller svalka dig med en glass. Vi har något för alla smaker!
+            </span>
+            </span>
+          </span>
+
           <div class="animal-card">
-            <img  class="animal-thumbnail" src="/images/waterbreak.jpg" alt="Törstig?">
+            <img  class="animal-thumbnail" src="/images/waterbreakweb.jpg" alt="Törstig?">
             <div class="animal-thumbnail-description">
-              <header class="animal-thumbnail-header">
+              <div class="animal-thumbnail-header">
                 Törstig?
-              </header>
+              </div>
               <p class="animal-thumbnail-text">
                 Ta en vattenpaus med Törst.. Torsten. Vi har glass också! And apan pizza!
               </p>
@@ -222,12 +275,80 @@
         </div>
 
       </article>
+      
     </section>
 
-    <section class="endsection"></section>
+    <section id="contact">
+      <h2>Kontakta oss</h2>
+
+        <article>
+
+
+          <div class="formular-and-maps">
+            <div class="formular-container">
+              <span class="subheader-text">
+                Fyll i formuläret nedan och prenumerera på vårt nyhetsbrev! Passa på att skriva en rad eller två så återkommer vi till dig så snart vi har möjlighet. Väl mött!
+              </span>
+              <form action="https://http-echo-server.azurewebsites.net" method="post">
+                <div>
+                  <span class="formular-label-margin">
+                    <label for="fname">Förnamn</label>
+                  </span>
+                  <span>
+                    <input type="text" id="fname" name="fname" label="fname" placeholder="John">
+                  </span>
+                </div>
+                <div>
+                  <span class="formular-label-margin">
+                    <label for="lname">Efternamn</label>
+                  </span>
+                  <span><input type="text" id="lname" name="lname" label="lname" placeholder="Hjort">
+                  </span>
+                </div>
+              <div>
+                <span class="formular-label-margin"><label for="email">Epost</label></span>
+                <span><input type="email" id="email" name="email" placeholder="john.hjort@epost.se"></span>
+              </div>
+              <div>
+                <span class="formular-label-margin">
+                  <label for="birthday">Födelsedag</label>
+                </span>
+                <span>
+                  <input type="date" id="birthday" name="birthday" label="birthday" placeholder="Födelsedag">
+                </span>
+              </div>
+            
+              <div>
+                <textarea name="message" cols="45" rows="10" placeholder="Ditt meddelande till oss.."></textarea>
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox" name="newsletter" checked>
+                <label for="checkbox">Jag vill få nyheter och uppdateringar</label>
+              </div>
+                <button class="subscribe-button" type="submit">Skicka</button>  
+              </form>
+            </div>
+            <div class="maps-container">
+              <span class="subheader-text">
+                Hitta till oss:
+              </span>
+              <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:400px;height:400px;">
+                <div id="embed-map-display" style="height:100%; width:100%;max-width:100%;">
+                  <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Billsta+106&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                  </iframe>
+                </div>
+                <a class="googl-ehtml" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="auth-map-data">
+                  premium bootstrap themes
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+    </section>
+
   </main>
 
-<footer>
+  <footer>
   <div class="socials-box">
     <a class="socials-button" href="https://www.facebook.com/niklas.hogstrom" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     <a class="socials-button" href="https://www.x.com/niklashogstrom" target="_blank"><i class="fa-brands fa-twitter"></i></a>

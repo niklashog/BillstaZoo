@@ -10,13 +10,14 @@ Palette Zoo
 https://coolors.co/fcf7ff-52b851-5b8c5a-bec15c-242124
 
 
-Green: 52b851
-Dark green: 5b8c5a
-Citron: bec15c
-White: fcf7ff
-Black: 242124
+Green: #52b851
+Dark green: #5b8c5a
+Citron: #bec15c
+White: #fcf7ff
+Black: #242124
 
 
 To do.
 
+När jag hovrar en bild så kommer bildtexten.
 SV | EN?
