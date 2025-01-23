@@ -18,15 +18,7 @@ h3 {
   display: flex;
   text-shadow: 0 0 5px black; 
 }
-.item1{
 
-}
-.item2{
-  
-}
-.item3{
-  
-}
 body, html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -59,15 +51,15 @@ scroll-snap-align: start;
 }
 
 .wrapper:nth-child(1) {
-background-image: url("./images/bg-1.webp");
+background-image: url("/images/bg-1.webp");
 }
 
 .wrapper:nth-child(2) {
-background-image: url("./images/bg-2.jpg");
+background-image: url("/images/bg-2.jpg");
 }
 
 .wrapper:nth-child(3) {
-background-image: url("./images/vastanafallet.jpg");
+background-image: url("/images/vastanafallet.jpg");
 } 
 
 .content {
