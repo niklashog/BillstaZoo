@@ -322,6 +322,11 @@ scale: 1;
   vertical-align: center;
   height: 0.5em;
 }
+
+.obligatory{
+  margin-top: 2em;
+  font-size: 0.8em;
+}
 /* END of Formular */
 
 
@@ -361,12 +366,12 @@ scale: 1;
   font-weight: 600;
   color: #fcf7ff;
   background-color: #0d7e4f;
-
   border-radius: 8px;
   width: 8em;
   height: 2.5em;
   padding: 5px;
   font-size: 0.9em;
+  margin-top: 1em;
 }
 
 .subscribe-button:hover{
