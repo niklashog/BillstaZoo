@@ -18,17 +18,17 @@ Building header/navbar and footer as isolated parts with inspiration from the mo
 
 
 Credit and much love to these artists on Unsplash:
-LLama, Photo by Rhys Courtney📸 on Unsplash
-Apa kliar huvudet, Photo by Nazir nazir on Unsplash
-Ekorre, Photo by Phil Robson on Unsplash
-Vattenpaus med Apa, Photo by Kristijan Arsov on Unsplash
-Torsten Apa, Vaktmästare, Photo by Pavan Kumar Nagendla on Unsplash
-Goat, Photo by Sorin Basangeac on Unsplash‘
-Gorilla, Photo by Aaron Dcosta on Unsplash
-Lejon, Photo by Virginia Portillo on Unsplash
-Simba, Photo by mana5280 on Unsplash
-Vit tiger, Photo by Ibrahim Bibs on Unsplash‘
-Panda, Photo by Devin Woody on Unsplash
-Dinosaur,  Photo by Scott Greer on Unsplash
-Cocktail, Photo by Julie Sd on Unsplash
+LLama, Photo by Rhys Courtney📸 on Unsplash | 
+Apa kliar huvudet, Photo by Nazir nazir on Unsplash | 
+Ekorre, Photo by Phil Robson on Unsplash | 
+Vattenpaus med Apa, Photo by Kristijan Arsov on Unsplash | 
+Torsten Apa, Vaktmästare, Photo by Pavan Kumar Nagendla on Unsplash | 
+Goat, Photo by Sorin Basangeac on Unsplash‘ | 
+Gorilla, Photo by Aaron Dcosta on Unsplash | 
+Lejon, Photo by Virginia Portillo on Unsplash | 
+Simba, Photo by mana5280 on Unsplash | 
+Vit tiger, Photo by Ibrahim Bibs on Unsplash‘ | 
+Panda, Photo by Devin Woody on Unsplash | 
+Dinosaur,  Photo by Scott Greer on Unsplash | 
+Cocktail, Photo by Julie Sd on Unsplash | 
 Restaurant, Photo by Samuel Foster on Unsplash
