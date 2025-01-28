@@ -16,7 +16,7 @@ Building header/navbar and footer as isolated parts with inspiration from the mo
 13. Contact section. Forms and Google map.
 14. Great lesson! Will do a lot different the next time and I'm 100% sure the same thought will hit me in the head at the end of that one anyways :)
 
-PS. Workitems and Images contain things that I have fiddled with on the side. Unrelated to this project. If you snoop, you snoop. Np.
+PS. Workitems and Images contain things that I have fiddled with on the side. Some of which are unrelated to this project. If you snoop, you snoop. Np.
 
 Credit and much love to these artists on Unsplash:
 LLama, Photo by Rhys Courtney📸 on Unsplash | 
